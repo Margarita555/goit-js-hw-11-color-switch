@@ -1,0 +1,16 @@
+button {
+  padding: 15px 30px;
+  margin: 5px;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+button[data-action="start"] {
+  background-color: blue;
+}
+
+button[data-action="stop"] {
+  background-color: red;
+}
