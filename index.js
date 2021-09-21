@@ -23,13 +23,9 @@ function setColorChangeInterval() {
     isActive = true;
 }
 
-function stopColorChange() {
-    clearInterval(intervalId);
-    isActive = false;
-}
-
-const randomIntegerFromInterval = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+function setBodyBgColor(color) {
+    document.body.style.backgroundColor = createRandomColor(colors);
+    startBtn.disabled = true;
 }
 
 function createRandomColor (colors) {
@@ -38,9 +34,16 @@ function createRandomColor (colors) {
     }
 }
 
-function setBodyBgColor(color) {
-    document.body.style.backgroundColor = createRandomColor(colors);
+const randomIntegerFromInterval = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+function stopColorChange() {
+    clearInterval(intervalId);
+    isActive = false;
+    startBtn.disabled = false;
+}
+
 
 
 
